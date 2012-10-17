@@ -50,6 +50,21 @@
 
 }
 
+-(NSDictionary *) getMagnet
+{
+    NSMutableDictionary *reqDict = [[NSMutableDictionary alloc] init];
+    [reqDict setObject:@"Link" forKey:@"object"];
+    [reqDict setObject:@"getMagnet" forKey:@"action"];
+    [reqDict setObject:argsBlock forKey:@"args"];
+    
+    Request *req = [[Request alloc] init];
+    [req setReqDict:reqDict];
+    
+    NSDictionary *returnData = [req sendRequest];
+    
+    return returnData;
+}
+
 -(NSDictionary *) submit
 {
     NSMutableDictionary *reqDict = [[NSMutableDictionary alloc] init];

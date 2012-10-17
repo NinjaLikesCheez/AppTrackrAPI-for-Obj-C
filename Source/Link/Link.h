@@ -24,6 +24,7 @@
 
 // Other
 -(NSDictionary *) get;
+-(NSDictionary *) getMagnet;
 -(NSDictionary *) submit;
 
 @end
