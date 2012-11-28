@@ -1,7 +1,4 @@
 == AppTrackrAPI-for-Obj-C == 
+------ Version 2.0.2 -------
 
-Please see the wiki for more information.
-
-Current version: 2.0.2
-
-*Note: This library uses ARC, this may change in the future.
+Uses the apptrackr API - documentation here; [url="http://hackulo.us/forums/index.php?/topic/52727-apptrackr-api/"]apptrackr API[/url]
