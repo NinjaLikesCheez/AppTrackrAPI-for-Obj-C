@@ -17,6 +17,7 @@ Uses json-framework by Stig - [json-framework](https://github.com/stig/json-fram
 ### Thanks ###
 
 splintr - some code; APIStatusCode Class; testing.
+
 dissident - making the apptrackr API ;-)
 
 [Hackulous](http://hackulo.us) :: [apptrackr](http://apptrackr.cd/)
