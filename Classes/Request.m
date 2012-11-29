@@ -14,32 +14,15 @@
 
 @implementation Request
 
--(void)initWithRequestBlock:(NSDictionary *)request
+-(id)initWithRequestBlock:(NSDictionary *)request
 {
+    if ((self = [super init]))
+    {
     reqDict = request;
+    }
+    
+    return self;
 }
-
-//  ==================
-//  - Getter Methods -
-//  ==================
-
--(NSDictionary *) reqDict
-{
-    return reqDict;
-}
-
-//  ==================
-//  - Setter Methods -
-//  ==================
-
--(void) setReqDict:(NSDictionary *)input
-{
-    reqDict = input;
-}
-
-//  =========
-//  - Other -
-//  =========
 
 - (NSDictionary *)sendRequest
 {

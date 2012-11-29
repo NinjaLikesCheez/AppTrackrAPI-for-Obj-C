@@ -13,15 +13,8 @@
     NSDictionary *authBlock;
     
 }
-//  ===========
-//  = Getters =
-//  ===========
--(NSDictionary *)authBlock;
 
-//  ===========
-//  = Setters =
-//  ===========
--(void) setAuthBlock:(NSDictionary *) input;
+-(id)initWithAuthorisation:(NSDictionary *)authorisation;
 
 // Other
 -(NSDictionary *) checkAuth;

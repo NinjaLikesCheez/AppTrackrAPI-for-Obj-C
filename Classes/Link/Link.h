@@ -14,18 +14,9 @@
     NSDictionary *authBlock;
 }
 
--(void)initWithArgumentsBlock:(NSDictionary *) arguments;
--(void)initWithArgumentsBlock:(NSDictionary *)arguments andAuthorisationBlock:(NSDictionary *) authorisation;
+-(id)initWithArgumentsBlock:(NSDictionary *) arguments;
+-(id)initWithArgumentsBlock:(NSDictionary *)arguments andAuthorisationBlock:(NSDictionary *) authorisation;
 
-// Getters
--(NSDictionary *) argsBlock;
--(NSDictionary *) authBlock;
-
-// Setters 
--(void) setArgsBlock:(NSDictionary *) input;
--(void) setAuthBlock:(NSDictionary *) input;
-
-// Other
 -(NSDictionary *) get;
 -(NSDictionary *) getMagnet;
 -(NSDictionary *) submit;

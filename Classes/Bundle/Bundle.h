@@ -13,15 +13,8 @@
     NSDictionary *argsBlock;
 }
 
--(void)initWithArgumentsBlock:(NSDictionary *) arguments;
+-(id)initWithArgumentsBlock:(NSDictionary *) arguments;
 
-// Getters
--(NSDictionary *) argsBlock;
-
-// Setters
--(void) setArgsBlock:(NSDictionary *) input;
-
-// Other
 -(NSDictionary *) getItunesIDs;
 -(NSDictionary *) getBundleIDs;
 

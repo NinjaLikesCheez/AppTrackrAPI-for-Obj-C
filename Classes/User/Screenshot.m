@@ -11,19 +11,14 @@
 
 @implementation Screenshot
 
-// Getters
--(NSDictionary *) argsBlock
+-(id)initWithArguments:(NSDictionary *)arguments
 {
-    return argsBlock;
+    if((self = [super init]))
+    {
+        argsBlock = arguments;
+    }
+    return self;
 }
-
-// Setters
--(void) setArgsBlock:(NSDictionary *) input
-{
-    argsBlock = input;
-}
-
-
 -(NSDictionary *) get
 {
     NSMutableDictionary *reqDict = [[NSMutableDictionary alloc] init];
@@ -31,8 +26,7 @@
     [reqDict setObject:@"get" forKey:@"action"];
     [reqDict setObject:argsBlock forKey:@"args"];
     
-    Request *req = [[Request alloc] init];
-    [req setReqDict:reqDict];
+    Request *req = [[Request alloc] initWithRequestBlock:reqDict];
     
     NSDictionary *returnData = [req sendRequest];
     

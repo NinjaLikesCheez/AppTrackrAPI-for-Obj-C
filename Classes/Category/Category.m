@@ -15,8 +15,7 @@
 {
     NSDictionary *reqDict = [[NSDictionary alloc] initWithObjectsAndKeys:@"Category", @"object", @"getList", @"action", nil]; 
     
-    Request *request = [[Request alloc] init];
-    [request setReqDict:reqDict];
+    Request *request = [[Request alloc] initWithRequestBlock:reqDict];
     
     NSDictionary *returnData = [request sendRequest];
                               

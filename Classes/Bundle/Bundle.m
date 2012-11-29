@@ -11,25 +11,15 @@
 
 @implementation Bundle
 
--(void)initWithArgumentsBlock:(NSDictionary *)arguments
+-(id)initWithArgumentsBlock:(NSDictionary *)arguments
 {
+    if ((self = [super init]))
+    {
     argsBlock = arguments;
+    }
+    return self;
 }
 
-// Getters
--(NSDictionary *) argsBlock
-{
-    return argsBlock;
-}
-
-// Setters
-#warning depricated
--(void) setArgsBlock:(NSDictionary *)input
-{
-    argsBlock = input;
-}
-
-// Other
 -(NSDictionary *) getItunesIDs
 {
     NSMutableDictionary *reqDict = [[NSMutableDictionary alloc] init];
@@ -37,8 +27,7 @@
     [reqDict setObject:@"getItunesIDs" forKey:@"action"];
     [reqDict setObject:argsBlock forKey:@"args"];
     
-    Request *req = [[Request alloc] init];
-    [req setReqDict:reqDict];
+    Request *req = [[Request alloc] initWithRequestBlock:reqDict];
     
     NSDictionary *returnData = [req sendRequest];
     
@@ -52,8 +41,7 @@
     [reqDict setObject:@"getBundleIDs" forKey:@"action"];
     [reqDict setObject:argsBlock forKey:@"args"];
     
-    Request *req = [[Request alloc] init];
-    [req setReqDict:reqDict];
+    Request *req = [[Request alloc] initWithRequestBlock:reqDict];
     
     NSDictionary *returnData = [req sendRequest];
     
