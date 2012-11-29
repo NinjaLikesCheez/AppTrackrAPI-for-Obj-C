@@ -11,6 +11,17 @@
 
 @implementation Link
 
+-(void)initWithArgumentsBlock:(NSDictionary *)arguments
+{
+    argsBlock = arguments;
+}
+
+-(void)initWithArgumentsBlock:(NSDictionary *)arguments andAuthorisationBlock:(NSDictionary *)authorisation
+{
+    argsBlock = arguments;
+    authBlock = authorisation;
+}
+
 // Getters 
 -(NSDictionary *) argsBlock
 {
@@ -23,11 +34,12 @@
 }
 
 // Setters
+#warning depricated
 -(void) setArgsBlock:(NSDictionary *)input
 {
     argsBlock = input;
 }
-
+#warning depricated
 -(void) setAuthBlock:(NSDictionary *)input
 {
     authBlock = input;

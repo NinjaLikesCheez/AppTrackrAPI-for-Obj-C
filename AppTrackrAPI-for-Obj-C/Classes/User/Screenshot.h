@@ -13,13 +13,8 @@
     NSDictionary *argsBlock;
 }
 
-// Getters
--(NSDictionary *) argsBlock;
+- (id) initWithArguments:(NSDictionary *)arguments;
 
-// Setters
--(void) setArgsBlock:(NSDictionary *) input;
-
-// Other
 -(NSDictionary *) get;
 
 @end

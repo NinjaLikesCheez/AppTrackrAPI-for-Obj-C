@@ -14,18 +14,7 @@
     NSDictionary *reqDict;
 }
 
--(void)initWithRequestBlock:(NSDictionary *) request;
-
-// Getter
-
--(NSDictionary *) reqDict;
-
-// Setter
-
--(void) setReqDict:(NSDictionary *) input;
-
-// Other
-
+-(id)initWithRequestBlock:(NSDictionary *) request;
 
 - (NSDictionary *)sendRequest;
 - (NSDictionary *)sendRequestWithErrorAlert:(BOOL)errorAlert;

@@ -14,6 +14,11 @@
 
 @implementation Request
 
+-(void)initWithRequestBlock:(NSDictionary *)request
+{
+    reqDict = request;
+}
+
 //  ==================
 //  - Getter Methods -
 //  ==================

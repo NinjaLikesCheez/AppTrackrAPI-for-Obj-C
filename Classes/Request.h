@@ -14,6 +14,8 @@
     NSDictionary *reqDict;
 }
 
+-(void)initWithRequestBlock:(NSDictionary *) request;
+
 // Getter
 
 -(NSDictionary *) reqDict;

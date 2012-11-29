@@ -11,41 +11,25 @@
 
 @implementation Link
 
--(void)initWithArgumentsBlock:(NSDictionary *)arguments
+-(id)initWithArgumentsBlock:(NSDictionary *)arguments
 {
+    if ((self = [super init]))
+    {
     argsBlock = arguments;
+    }
+    return self;
 }
 
--(void)initWithArgumentsBlock:(NSDictionary *)arguments andAuthorisationBlock:(NSDictionary *)authorisation
+-(id)initWithArgumentsBlock:(NSDictionary *)arguments andAuthorisationBlock:(NSDictionary *)authorisation
 {
+    if ((self = [super init]))
+    {
     argsBlock = arguments;
     authBlock = authorisation;
+    }
+    return self;
 }
 
-// Getters 
--(NSDictionary *) argsBlock
-{
-    return argsBlock;
-}
-
--(NSDictionary *) authBlock
-{
-    return authBlock;
-}
-
-// Setters
-#warning depricated
--(void) setArgsBlock:(NSDictionary *)input
-{
-    argsBlock = input;
-}
-#warning depricated
--(void) setAuthBlock:(NSDictionary *)input
-{
-    authBlock = input;
-}
-
-// Other
 -(NSDictionary *) get
 {
     NSMutableDictionary *reqDict = [[NSMutableDictionary alloc] init];
@@ -53,8 +37,7 @@
     [reqDict setObject:@"get" forKey:@"action"];
     [reqDict setObject:argsBlock forKey:@"args"];
     
-    Request *req = [[Request alloc] init];
-    [req setReqDict:reqDict];
+    Request *req = [[Request alloc] initWithRequestBlock:reqDict];
     
     NSDictionary *returnData = [req sendRequest];
     
@@ -69,8 +52,7 @@
     [reqDict setObject:@"getMagnet" forKey:@"action"];
     [reqDict setObject:argsBlock forKey:@"args"];
     
-    Request *req = [[Request alloc] init];
-    [req setReqDict:reqDict];
+    Request *req = [[Request alloc] initWithRequestBlock:reqDict];
     
     NSDictionary *returnData = [req sendRequest];
     
@@ -85,9 +67,8 @@
     [reqDict setObject:authBlock forKey:@"auth"];
     [reqDict setObject:argsBlock forKey:@"args"];
 
-    Request *req = [[Request alloc] init];
-    [req setReqDict:reqDict];
-
+    Request *req = [[Request alloc] initWithRequestBlock:reqDict];
+    
     NSDictionary *returnData = [req sendRequest];
 
     return returnData;

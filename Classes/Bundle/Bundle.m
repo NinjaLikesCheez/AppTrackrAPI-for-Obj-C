@@ -11,6 +11,11 @@
 
 @implementation Bundle
 
+-(void)initWithArgumentsBlock:(NSDictionary *)arguments
+{
+    argsBlock = arguments;
+}
+
 // Getters
 -(NSDictionary *) argsBlock
 {
@@ -18,6 +23,7 @@
 }
 
 // Setters
+#warning depricated
 -(void) setArgsBlock:(NSDictionary *)input
 {
     argsBlock = input;

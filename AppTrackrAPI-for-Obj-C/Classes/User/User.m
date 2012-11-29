@@ -11,27 +11,14 @@
 
 @implementation User
 
-//  ==================
-//  - Getter Methods -
-//  ==================
-
--(NSDictionary *) authBlock
+-(id)initWithAuthorisation:(NSDictionary *)authorisation
 {
-    return authBlock;
+    if ((self = [super init]))
+    {
+        authBlock = authorisation;
+    }
+    return self;
 }
-
-//  ==================
-//  - Setter Methods -
-//  ==================
-
--(void) setAuthBlock:(NSDictionary *)input
-{
-    authBlock = input;
-}
-
-//  =========
-//  - Other -
-//  =========
 
 -(NSDictionary *) checkAuth;
 {
@@ -40,8 +27,8 @@
     [reqDict setObject:@"checkAuth" forKey:@"action"];
     [reqDict setObject:authBlock forKey:@"auth"];
     
-    Request *req = [[Request alloc] init];
-    [req setReqDict:reqDict];
+    Request *req = [[Request alloc] initWithRequestBlock:reqDict];
+
     NSDictionary *returnData = [req sendRequest];
     
     return returnData;

@@ -14,6 +14,9 @@
     NSDictionary *authBlock;
 }
 
+-(void)initWithArgumentsBlock:(NSDictionary *) arguments;
+-(void)initWithArgumentsBlock:(NSDictionary *)arguments andAuthorisationBlock:(NSDictionary *) authorisation;
+
 // Getters
 -(NSDictionary *) argsBlock;
 -(NSDictionary *) authBlock;

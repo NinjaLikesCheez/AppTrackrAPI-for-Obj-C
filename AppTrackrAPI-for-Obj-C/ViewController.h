@@ -9,5 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+{
+    NSDictionary *authorisation;
+    NSDictionary *arguments;
+    NSDictionary *returnData;
+    int code;
+}
 
 @end

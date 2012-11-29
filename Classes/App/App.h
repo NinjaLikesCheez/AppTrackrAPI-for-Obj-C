@@ -13,10 +13,14 @@
     NSDictionary *argsBlock;
 }
 
+-(void) initWithArgumentsBlock:(NSDictionary *) arguments;
+
 // Getters
+#warning depricated
 -(NSDictionary *) argsBlock;
 
 // Setters
+#warning depricated
 -(void) setArgsBlock:(NSDictionary *) input;
 
 // Other

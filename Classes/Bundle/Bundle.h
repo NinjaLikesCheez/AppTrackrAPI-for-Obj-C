@@ -13,6 +13,8 @@
     NSDictionary *argsBlock;
 }
 
+-(void)initWithArgumentsBlock:(NSDictionary *) arguments;
+
 // Getters
 -(NSDictionary *) argsBlock;
 
