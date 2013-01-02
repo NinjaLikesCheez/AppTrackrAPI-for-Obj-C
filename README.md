@@ -1,3 +1,7 @@
+## Obsolete ##
+On December 30th, apptrackr sadly closed it's doors, this interaction library will no longer work. Thanks.
+## ##
+
 # AppTrackrAPI-for-Obj-C #
 ## Version 2.0.2 ##
 
